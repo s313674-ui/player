@@ -266,7 +266,7 @@ function postprocess(output, originalWidth, originalHeight, scale, padX, padY) {
       height: y2 - y1,
       score: bestScore,
       classId,
-      label: labels[classId] || `class_${classId}`,
+     label: (classId === 3) ? "player" : (labels[classId] || `class_${classId}`),
     });
   }
 
